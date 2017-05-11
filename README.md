@@ -8,7 +8,7 @@ Allows processing MIDI file into CSV file and CSV file (in appropriate format) b
 
 ## cmake
 Intention is to update and simplify portability for the midicsv utility, initially particularly for
-Windows x64 and MSVC, but also to use the flexibilty of cmake for generating other build systems and
+Windows x64 and MSVC, but also to use the flexibility of cmake for generating other build systems and
 platforms.
 
 ## further development
