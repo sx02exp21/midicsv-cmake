@@ -1,0 +1,47 @@
+MIDICSV(1)                        General Commands Manual                        MIDICSV(1)
+
+NAME
+       midicsv - translate MIDI file to CSV
+
+SYNOPSIS
+       midicsv [ -u -v ] [ infile [ outfile ] ]
+
+DESCRIPTION
+       midicsv reads a standard MIDI file and decodes it into a CSV (Comma-Separated Value)
+       file which preserves all the information in the MIDI file.  The ASCII CSV  file  may
+       be  loaded  into a spreadsheet or database application, or processed by a program to
+       transform the MIDI data (for example, to key transpose a composition  or  extract  a
+       track from a multi-track sequence).  A CSV file in the format created by midicsv may
+       be converted back into a standard MIDI file with the csvmidi program.
+
+OPTIONS
+       -u        Print how-to-call information.
+
+       -v        Print verbose debugging information on  standard  error.   The  MIDI  file
+                 header is dumped, along with the length of each track in the file.
+
+FILES
+       If  no infile is specified or infile is ``-'', midicsv reads its input from standard
+       input; if no outfile is given or outfile is ``-'', CSV output is written   to  stan‐
+       dard output.  The input and output are processed in a strictly serial manner; conse‐
+       quently midicsv may be used in pipelines without restrictions.
+
+BUGS
+       midicsv assumes its input is a well-formed standard  MIDI  file;  while  some  error
+       checking is performed, gross errors in the input file may cause midicsv to crash.
+
+       Please report problems to bugs@fourmilab.ch.
+
+SEE ALSO
+       csvmidi(1), midicsv(5)
+
+AUTHOR
+                                           John Walker
+                                     http://www.fourmilab.ch/
+
+       This  software  is  in the public domain.  Permission to use, copy, modify, and dis‐
+       tribute this software and its documentation for  any  purpose  and  without  fee  is
+       hereby  granted,  without any conditions or restrictions.  This software is provided
+       ``as is'' without express or implied warranty.
+
+4th Berkeley Distribution                9 FEB 2004                              MIDICSV(1)
